@@ -100,6 +100,10 @@ h5 {
   margin-top: 40px;
   align-items: flex-end;
   justify-content: space-between;
+      -webkit-touch-callout: none;       /* disables callout menu on long press */
+    -webkit-tap-highlight-color: transparent; /* removes highlight */
+    color: #fff;                       /* ensure it's white like the card */
+    text-decoration: none;    
 }
 
 h6 {
@@ -225,12 +229,4 @@ h5.name {
     margin-right: -25px;
   }
 }
-}
-
-.front-face .number,
-.front-face .name,
-.front-face .valid-date h5 {
-    -webkit-touch-callout: none; /* disables callout menu on long press */
-    -webkit-user-select: text;   /* allow selection but remove link style */
-    -webkit-tap-highlight-color: transparent; /* removes blue highlight */
 }
