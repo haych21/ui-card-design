@@ -181,7 +181,7 @@ h5.name {
   .container.is-flipped {
     transform: rotateY(180deg);
   }
-  
+
 @media (max-width: 430px) {
   .container {
     width: 330px;        /* scaled-down version of desktop width */
@@ -222,7 +222,7 @@ h5.name {
 
   .signature i {
     font-size: 10px;
-    margin-right: -20px;
+    margin-right: -15px;
   }
 }
 }
