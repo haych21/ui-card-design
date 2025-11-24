@@ -166,17 +166,14 @@ h5.name {
   margin-top: 15px;
 }
  
-/* -------------------------------- */
-/* MOBILE SCALING & TAP FLIP         */
-/* iPhone 14 Pro Max ~430px viewport */
-/* -------------------------------- */
+/* MOBILE SCALING & TAP FLIP */
 @media (max-width: 430px) {
 
-  /* Card container scaling */
+  /* Container scaling */
   .container {
-    width: 90%;           /* scale with screen width */
-    height: auto;         /* adjusts based on content */
-    aspect-ratio: 16/9;   /* maintain card proportions */
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16/9; /* maintain card proportions */
     padding: 10px;
   }
 
@@ -192,7 +189,7 @@ h5.name {
     transform: rotateY(180deg);
   }
 
-  /* Front face adjustments */
+  /* FRONT FACE */
   .front-face header {
     padding: 0 5px;
   }
@@ -206,11 +203,12 @@ h5.name {
     width: 35px;
   }
 
+  /* Keep name & valid date side by side */
   .front-face .card-details {
-    flex-direction: column;   /* stack number, name, date vertically */
-    align-items: flex-start;
+    flex-direction: row;        /* side by side */
+    justify-content: space-between;
+    align-items: flex-end;
     margin-top: 10px;
-    gap: 5px;
   }
 
   h5 {
@@ -230,9 +228,13 @@ h5.name {
     font-size: 8px;
   }
 
-  /* Back face adjustments */
+  /* BACK FACE */
   .card.back-face {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* prevent content going under strip */
+    position: relative;
   }
 
   .card.back-face .magnetic-strip {
@@ -241,9 +243,11 @@ h5.name {
   }
 
   .card.back-face .signature {
-    margin-top: auto;  /* stick to bottom */
-    width: 90%;
-    height: 10%;
+    position: absolute;       /* stick signature above bottom */
+    bottom: 15px;
+    right: 5%;
+    width: 50%;
+    height: 20px;
   }
 
   .signature i {
@@ -253,10 +257,11 @@ h5.name {
 
   .card.back-face h5 {
     font-size: 10px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .card.back-face h6 {
     font-size: 8px;
+    margin-bottom: 5px;
   }
 }
