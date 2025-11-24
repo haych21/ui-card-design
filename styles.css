@@ -165,8 +165,14 @@ h5.name {
   font-size: 8px;
   margin-top: 15px;
 }
+ /* Remove hover flip for mobile */
+@media (hover: none) {
+  .container:hover {
+    transform: none;
+  }
+}
 
-/* Tap flip (mobile) */
+/* Tap flip */
 .container.is-flipped {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
