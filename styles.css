@@ -169,13 +169,6 @@ h5.name {
 /* MOBILE SCALING & TAP FLIP */
 @media (max-width: 430px) {
 
-  /* Container scaling */
-  .container {
-    width: 90%;
-    height: auto;
-    aspect-ratio: 16/9; /* maintain card proportions */
-    padding: 10px;
-  }
 
   /* Disable hover flip on mobile */
   @media (hover: none) {
@@ -188,29 +181,14 @@ h5.name {
   .container.is-flipped {
     transform: rotateY(180deg);
   }
-
-  /* FRONT FACE */
-  .front-face header {
-    padding: 0 5px;
+  
+@media (max-width: 430px) {
+  .container {
+    width: 330px;        /* scaled-down version of desktop width */
+    height: 198px;       /* keep same ratio as desktop: 375/225 = 1.6667 */
   }
 
-  .front-face .logo img {
-    width: 36px;
-    margin-right: 5px;
-  }
-
-  .front-face .chip {
-    width: 35px;
-  }
-
-  /* Keep name & valid date side by side */
-  .front-face .card-details {
-    flex-direction: row;        /* side by side */
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 10px;
-  }
-
+  /* Keep all inner elements same structure, just scale font */
   h5 {
     font-size: 12px;
   }
@@ -221,31 +199,23 @@ h5.name {
 
   h5.name {
     font-size: 12px;
-    margin-top: 5px;
   }
 
   h6 {
     font-size: 8px;
   }
 
-  /* BACK FACE */
-  .card.back-face {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* prevent content going under strip */
-    position: relative;
+  .front-face .logo img {
+    width: 36px;
   }
 
-  .card.back-face .magnetic-strip {
-    top: 10%;
-    height: 20%;
+  .front-face .chip {
+    width: 36px;
   }
 
+  /* BACK FACE adjustments */
   .card.back-face .signature {
-    position: absolute;       /* stick signature above bottom */
-    bottom: 15px;
-    right: 5%;
+    bottom: 10px;   /* small offset from bottom */
     width: 50%;
     height: 20px;
   }
@@ -254,14 +224,5 @@ h5.name {
     font-size: 10px;
     margin-right: -20px;
   }
-
-  .card.back-face h5 {
-    font-size: 10px;
-    margin-top: 10px;
-  }
-
-  .card.back-face h6 {
-    font-size: 8px;
-    margin-bottom: 5px;
-  }
+}
 }
