@@ -226,3 +226,11 @@ h5.name {
   }
 }
 }
+
+.front-face .number,
+.front-face .name,
+.front-face .valid-date h5 {
+    -webkit-touch-callout: none;       /* disables callout menu on long press */
+    -webkit-tap-highlight-color: transparent; /* removes blue highlight */
+    user-select: text;                  /* allow text selection without special webkit prefix */
+}
