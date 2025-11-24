@@ -165,3 +165,8 @@ h5.name {
   font-size: 8px;
   margin-top: 15px;
 }
+
+/* Tap flip (mobile) */
+.container.is-flipped {
+    transform: rotateY(180deg);
+}
