@@ -216,7 +216,7 @@ h5.name {
   /* BACK FACE adjustments */
   .card.back-face .signature {
     bottom: 10px;   /* small offset from bottom */
-    width: 50%;
+    width: 85%;
     height: 20px;
   }
 
